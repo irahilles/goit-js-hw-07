@@ -32,4 +32,6 @@ btn.style.width = '86px';
 btn.style.borderRadius = '8px';
 btn.style.color = '#FFFFFF';
 btn.style.padding = '8px 16px';
+btn.style.marginTop = '8px';
+
 

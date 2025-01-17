@@ -24,8 +24,42 @@ body {
 }
 
 .login-form {
-  padding: 24px;
   display: flex;
   flex-direction: column;
+  gap: 8px; 
+  max-width: 408px;
 }
-
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.login-form input {
+  width: 100%; 
+  padding: 8px; 
+  border: 1px solid #808080; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+}
+.login-form input :hover {
+  border: 1px solid #000000;
+}
+.item {
+  background-color: #F6F6FE;
+  max-width: 392px;
+  padding: 0;
+  padding-right: 34px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: left;
+}
