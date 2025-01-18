@@ -25,18 +25,17 @@ const images = [
   }
 ];
 const gallery = document.querySelector('.gallery');
-images.forEach(({ url, alt }) => {
-  const listItem = document.createElement("li");
-  const img = document.createElement("img");
-
-  img.src = url;
-  img.alt = alt;
-  img.style.width = "100%"; 
-  img.style.height = "100%"; 
-
-  listItem.append(img);
-  gallery.append(listItem);
+const listItemsHTML = images.map(({ url, alt }) => {
+  return `
+    <li>
+      <img src="${url}" alt="${alt}" style="width: 100%; height: 100%;">
+    </li>
+  `;
 });
+
+const galleryHTML = listItemsHTML.join('');
+gallery.insertAdjacentHTML('beforeend', galleryHTML);
+
 gallery.style.display = "flex";
 gallery.style.rowGap = "48px";
 gallery.style.columnGap = "24px";
